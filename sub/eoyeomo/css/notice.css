@@ -1,0 +1,233 @@
+main{
+    padding:0 50px;
+}
+#banner{
+    margin-top: 84px;
+    position: relative;
+    background-image: url(../img/sub/sv02.jpg);
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    background-size: cover;
+    border-radius: 40px;
+    height: 302px;
+}
+#banner>div{
+    position: absolute;
+    left: 60px;
+    bottom: 50px;
+}
+#banner h2{
+    font-size: 50px;
+    line-height: 1.48;
+    color: #fff;
+    font-weight: 400;
+}
+#banner p{
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+#content{
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+    padding-top: 80px;
+}
+#content>h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 70px;
+}
+#content>h3::before{
+    content: " ";
+    display: inline-block;
+    width: 50px; height: 1px;
+    background-color: #333;
+    margin-right: 20px;
+    margin-bottom: 6px;
+}
+.searchbox{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.searchbox input[type=text]{
+    border:none;
+    outline: none;
+    background: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 0 9px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    width: 220px;
+    border-radius: 2px;
+    margin-right: 3px;
+}
+.searchbox button[type=submit]{
+    outline: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    min-width: 80px;
+    border-radius: 2px;
+}   
+
+.list_wrap{
+    border-top: 2px #ee7399 solid;
+    border-bottom: 1px #bbb solid;
+    font-size: 13px;
+}
+.list_wrap>.C_title>li{
+    text-align: center !important;
+    color: #fea4c0 !important;
+}
+.list_wrap>ul{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px #ddd solid;
+}
+.list_wrap>ul>li{
+    background-color: #fff;
+    padding: 12px 5px;
+    font-weight: 500;
+    width: 100%;
+    color: #767676;
+    text-align: center;
+}
+.C_list_title>a{
+    display: inline-block;
+    color: #333
+}
+.C_list_title>a>img{
+    line-height: 20px;
+    width: 13px; height: 11px;
+    margin: 0 1px;
+}
+.C_list_title>a>img:last-child{
+    line-height: 14px;
+    width: 11px; height: 11px;
+}
+
+.list_wrap>ul>li:nth-of-type(1){
+    width: 60px;
+}
+.list_wrap>ul>li:nth-of-type(2){
+    text-align: left;
+}
+.list_wrap>ul>li:nth-of-type(3){
+    width: 100px;
+}
+.list_wrap>ul>li:nth-of-type(4){
+    width: 45px;
+}
+.C_list_notice>li:first-child{
+    background-image: url(../img/sub/icon_notice.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -9999px;
+}
+.count::before{
+    content: "조회: ";
+    display: none;
+}
+
+.page_num{
+    margin-top: 15px;
+}
+.page_num>ul{
+    display: flex;
+    justify-content: center;
+}
+.page_num>ul>li{
+    margin-right: 5px;
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #646464;
+    text-align: center;
+}
+.page_num>ul>li>a{
+    color: #646464;
+}
+.page_num .page_now>a{
+    color: #ee7399 !important;
+    font-weight: bold;
+}
+.list_arrow{
+    margin-top: 1px;
+    cursor: pointer;
+    width: 25px; height: 25px;
+    background-image: url(../img/sub/icon_paging_next.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+    main{
+        padding:0 15px;
+        box-sizing: border-box;
+    }
+    #banner {
+        margin-bottom: 40px;
+        border-radius: 20px;
+        height: 170px;
+    }
+    #banner>div{
+        left: 20px;
+        bottom: 30px;
+        right: 20px;
+    }
+    #banner h2{
+        font-size: 24px;
+    }
+    #content{
+        padding-top: 0px;
+    }
+    #content>h3{
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .list_wrap{
+        width: auto;
+        border: none;
+        border-top: 1px solid #ccc;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .list_wrap>.C_title{
+        display: none;
+    }
+    .list_wrap>ul{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        border-bottom: 1px #ddd solid;
+    }
+    .list_wrap>ul>li:first-child{
+        display: none;
+    }
+    .list_wrap>ul>.C_list_title{
+        padding-bottom: 0px;
+    }
+    .list_wrap>ul>li:nth-of-type(4){
+        width: 200px;
+        display: flex;
+    }
+    li.count::before{
+       display: block;
+    }
+  }

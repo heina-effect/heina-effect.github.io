@@ -1,0 +1,222 @@
+main{
+    padding:0 50px;
+}
+#banner{
+    margin-top: 84px;
+    position: relative;
+    background-image: url(../img/sub/sv03.jpg);
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    background-size: cover;
+    border-radius: 40px;
+    height: 302px;
+}
+#banner>div{
+    position: absolute;
+    left: 60px;
+    bottom: 50px;
+}
+#banner h2{
+    font-size: 50px;
+    line-height: 1.48;
+    color: #fff;
+    font-weight: 400;
+}
+#banner p{
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+#content{
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+    padding-top: 80px;
+}
+#content>h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 70px;
+}
+#content>h3::before{
+    content: " ";
+    display: inline-block;
+    width: 50px; height: 1px;
+    background-color: #333;
+    margin-right: 20px;
+    margin-bottom: 6px;
+}
+.searchbox{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.searchbox select{
+    border: none;
+    outline: none;
+    background: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 0 9px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    margin-right: 3px;
+    color: #666;
+}
+.searchbox input[type=text]{
+    border:none;
+    outline: none;
+    background: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 0 9px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    width: 220px;
+    border-radius: 2px;
+    margin-right: 3px;
+}
+.searchbox button[type=submit]{
+    outline: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    min-width: 80px;
+    border-radius: 2px;
+}   
+
+.news_cont{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 45px);
+    margin-right:45px;
+}
+.news_cont>figure{
+    width: 25%;
+    padding: 40px 45px 5px 0;
+}
+.news_cont>figure>a{
+    display: block;
+}
+.news_cont>figure>a>img{
+    width: 100%;
+}
+.news_cont>figure>a>figcaption{
+    padding: 15px 0 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}
+.news_cont>figure>a>figcaption::after{
+    content:"";
+    display: inline-block;
+    width: 13px; height: 11px;
+    background-image: url(../img/sub/icon_img.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.page_num{
+    margin-top: 15px;
+}
+.page_num>ul{
+    display: flex;
+    justify-content: center;
+}
+.page_num>ul>li{
+    margin-right: 5px;
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #646464;
+    text-align: center;
+}
+.page_num>ul>li>a{
+    color: #646464;
+}
+.page_num .page_now>a{
+    color: #ee7399 !important;
+    font-weight: bold;
+}
+.list_arrow{
+    margin-top: 1px;
+    cursor: pointer;
+    width: 25px; height: 25px;
+    background-image: url(../img/sub/icon_paging_next.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 1025px) {
+    .news_cont{
+        width: 100%;
+    }
+    .news_cont>figure{
+        width: 33.3%;
+        padding: 45px 0 5px 5px;
+    }
+  }
+
+@media only screen and (max-width: 767px) {
+    main {
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    #banner {
+        margin-bottom: 40px;
+        border-radius: 20px;
+        height: 170px;
+    }
+    #banner>div{
+        left: 20px;
+        bottom: 30px;
+        right: 20px;
+    }
+    #banner h2{
+        font-size: 24px;
+    }
+    #content {
+        padding-top: 0px;
+    }
+
+    #content>h3{
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    
+    .news_cont{
+        width: 100%;
+    }
+    .news_cont>figure{
+        width: 50%;
+        padding-top: 30px;
+    }
+    .searchbox{
+        display: inline-block
+    }
+    .searchbox>li:first-child{
+        float: left;
+    }
+    .searchbox>li>input[type="text"]{
+        position: absolute;
+        right: 82px;
+    }
+    .searchbox>li button[type=submit]{
+        position: absolute;
+        right: 0px;
+    }
+  }
