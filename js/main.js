@@ -93,9 +93,6 @@ class Header extends HTMLElement {
     </header>
     `
   }
-
-
 }
-
-customElements.define('main-left', Header);
+customElements.define('header-components', Header);
 
