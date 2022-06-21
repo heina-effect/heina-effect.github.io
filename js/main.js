@@ -33,9 +33,9 @@ class Header extends HTMLElement {
           <p>
             안녕하세요
             <br>
-            저는 Front-end 직군을 희망하는 개발자 입니다.
+            경험을 통해 성장하고 있는
             <br>
-            끊임없이 배우고 성장하길 원하고 있습니다.
+            FRONT-END 개발자 입니다.
             <br>
           </p>
           <p>
@@ -45,9 +45,9 @@ class Header extends HTMLElement {
             </strong>    
           </p>
           <p>
-            당신과 함께 더 멋진 앞으로를 꿈꾸고 싶습니다.
+            더 멋진 기회를 꿈꾸고 있습니다.
             <br>
-            또 언제든지 이곳에 방문하신다면 항상 발전하는 저를 보고 계실겁니다.
+            언제든지 다시 방문해주세요.
             <br>
             감사합니다. 다음에 또 뵙겠습니다. 
           </p>
@@ -58,31 +58,31 @@ class Header extends HTMLElement {
       </article>
       <article id="nav">
         <ul>
-          <li>
+          <li >
             <a class="darkMode">
               <img class="lightBtn" src="img/sun.png" alt="darkLightMode">
             </a>
           </li>
-          <li>
+          <li class="navList">
             <a href="./index.html">
               <!-- <img class="navBtn" src="img/skill.svg" alt="skillSvg"> -->
               <img class="navBtn" src="img/skill.png" alt="skillSvg">
               <p class="caption">SKILL</p>
             </a>
           </li>
-          <li>
+          <li class="navList">
             <a href="./project.html">
               <img class="navBtn navDark" src="img/project.svg" alt="proSvg">
               <p class="caption">PROJECT</p>
             </a>
           </li>
-          <li>
+          <li class="navList">
             <a href="./about.html">
-              <img class="navBtn navDark" src="img/monster.svg" alt="carSvg">
+              <img class="navBtn navDark" src="img/monster.svg" alt="monsterSvg">
               <p class="caption">ABOUT</p>
             </a>
           </li>
-          <li>
+          <li class="navList">
             <a href="./contact.html">
               <img class="navBtn navDark" src="img/add.svg" alt="addSvg">
               <p class="caption">CONTACT</p>
@@ -92,6 +92,28 @@ class Header extends HTMLElement {
       </article>
     </header>
     `
+    // let navLists = document.querySelectorAll(".navList>a>img")
+    // for (let navList of navLists) {
+    //   navList.addEventListener("click", (e)=>{
+    //     e.preventDefault();
+    //     console.log("target",e)
+    //     // navList.src = "img/skill.png";
+    //     let filePath = navList.src
+    //     // let filelength = srcd.length;
+    //     console.log("파일주소", filePath)
+        
+    //     let change = filePath.split(".").pop()
+
+
+    //     // let fileDot = filePath.substr(-3)
+    //     // console.log("확장자명", fileDot)
+    //     // fileDot = "png"
+    //     // console.log("확장자명", fileDot)
+    //     // src="img/skill.png"
+
+    //     // http://127.0.0.1:5500/Heina/heina-effect.github.io/img/project.svg
+    //   })
+    // }
   }
 }
 customElements.define('header-components', Header);

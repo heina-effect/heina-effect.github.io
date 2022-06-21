@@ -1,112 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heiniffect</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heiniffect</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
+
 <body>
-    <header-components></header-components>
-    <main>
-        <article class="bg">
-            <div class="category">
-                <h2>
-                    CONTACT ME
-                </h2>
-                <div></div>
+  <header-components></header-components>
+  <main>
+    <article class="bg">
+      <div class="category">
+        <h2>
+          CONTACT ME
+        </h2>
+        <div></div>
+      </div>
+      <section id="contact">
+        <h3>
+          CONTACT
+        </h3>
+        <p>
+          저에 대해 궁금하시거나 관심이 있으시다면, 언제든지 연락주세요
+        </p>
+        <form id="gform"
+          action="https://script.google.com/macros/s/AKfycbwkZTPePZD7-nsv6sronOWeK96VGDxcLO_oPRFoILTKtpE-7FPIB9YYS31xt75lAxCv/exec"
+          method="POST">
+          <div class="form-elements">
+            <input type="text" name="name" id="name" placeholder="Your name..">
+            <input type="text" name="email" id="email" placeholder="Your e-mail..">
+            <textarea id="message" name="message" placeholder="Write something.."></textarea>
+            <div class="honeypot-field">
+              <label for="honeypot">스팸방지를 위해 빈칸으로 두세요</label>
+              <input class="honeypot" type="text" name="honeypot" value="" />
             </div>
-            <section id="contact">
-                <h3>
-                    CONTACT
-                </h3>
-                <p>
-                    저에 대해 궁금하시거나 관심이 있으시다면, 언제든지 연락주세요
-                </p>
-                <form id="gform" action="https://script.google.com/macros/s/AKfycbwkZTPePZD7-nsv6sronOWeK96VGDxcLO_oPRFoILTKtpE-7FPIB9YYS31xt75lAxCv/exec" method="POST">
-                    <div class="form-elements">
-                        <input  type="text" name="name" id="name" placeholder="Your name..">
-                        <input type="text" name="email" id="email" placeholder="Your e-mail..">
-                        <textarea id="message" name="message" placeholder="Write something.."></textarea>
-                        <div class="honeypot-field">
-                            <label for="honeypot">스팸방지를 위해 빈칸으로 두세요</label>
-                            <input class="honeypot" type="text" name="honeypot" value="" />
-                        </div>
-                        <button type="submit" value="submit" onclick="return check_input();">Send message</button>
-                    </div>
-                    <div class="thankyou_message" style="display:none;">
-                        <h2><em>Thanks</em> for contacting me!
-                          I will get back to you soon!</h2>
-                    </div>
-                
-                </form>
-                
-                <div class="sns">
-                    <ul>
-                        <li>
-                            <a href="" target="_blank"><img src="img/4_1facebook.svg" alt="facebook"></a>        
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/hyun_aplus/" target="_blank"><img src="img/4_2instagram.svg" alt="instagram"></a>        
-                        </li>
-                        <li>
-                            <a href="https://open.kakao.com/o/swAjAvGd" target="_blank"><img src="img/4_4kakao.png" alt="kakao"></a>        
-                        </li>
-                        <li>
-                            <a href="https://github.com/heina-effect" target="_blank"><img src="img/4_3github.png" alt="github"></a>        
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </article>
-    </main>
-    <script src="js/main.js"></script>
-    <script data-cfasync="false" type="text/javascript" src="js/FormSubmit.js"></script>
+            <button type="submit" value="submit" onclick="return check_input();">Send message</button>
+          </div>
+          <div class="thankyou_message" style="display:none;">
+            <h2><em>Thanks</em> for contacting me!
+              I will get back to you soon!</h2>
+          </div>
+
+        </form>
+
+        <div class="sns">
+          <ul>
+            <li>
+              <a href="https://open.kakao.com/o/swAjAvGd" target="_blank"><img src="img/4_4kakao.png" alt="kakao"></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/hyun_aplus/" target="_blank"><img src="img/4_2instagram.svg"
+                  alt="instagram"></a>
+            </li>
+            <li>
+              <a href="https://velog.io/@heina-effect" target="_blank"><img src="img/4_1velog.png" alt="velog"></a>
+            </li>
+            <li>
+              <a href="https://github.com/heina-effect" target="_blank"><img src="img/4_3github.png" alt="github"></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+  <script src="js/main.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/FormSubmit.js"></script>
 </body>
 <script data-cfasync="false" src="js/script.js"></script>
 <script type="text/javascript">
+  function check_input() {
+    document.querySelector("#gform").action = "https://script.google.com/macros/s/AKfycbwkZTPePZD7-nsv6sronOWeK96VGDxcLO_oPRFoILTKtpE-7FPIB9YYS31xt75lAxCv/exec"
+    const name = document.querySelector("#name");
+    const email = document.querySelector("#email");
+    const message = document.querySelector("#message");
+    if (!name.value) {
+      alert("이름을 입력해주세요");
+      name.focus();
+      return false;
+    }
+    if (!email.value) {
+      alert("이메일을 입력해주세요");
+      email.focus();
+      return false;
+    }
+    else if (email.value != "") {
+      var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+      if (exptext.test(email.value) == false) {
+        //이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우			
+        alert("이메일형식이 올바르지 않습니다.");
+        email.focus();
+        return false;
+      }
+      if (!message.value) {
+        alert("내용을 입력해주세요!");
+        message.focus();
+        return false;
+      }
+    }
+    /* 한번에 유효성검사를 하고 싶을 때
     function check_input() {
         document.querySelector("#gform").action="https://script.google.com/macros/s/AKfycbwkZTPePZD7-nsv6sronOWeK96VGDxcLO_oPRFoILTKtpE-7FPIB9YYS31xt75lAxCv/exec"
-        const name = document.querySelector("#name");
-        const email = document.querySelector("#email");
-        const message = document.querySelector("#message");
-        if(!name.value) {
+        const formValue = document.querySelectorAll(".form_value");
+        formValue.forEach(() => {
+            if(formValue.values != "") {
                 alert("이름을 입력해주세요");
-                name.focus();
                 return false;
             }
-        if(!email.value) {
-                alert("이메일을 입력해주세요");
-                email.focus();
-                return false;
-            }
-        else if(email.value != "") {
-            var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
-            if(exptext.test(email.value)==false) {
-                //이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우			
-                alert("이메일형식이 올바르지 않습니다.");
-                email.focus();
-                return false;
-            }
-        if(!message.value) {
-                alert("내용을 입력해주세요!");
-                message.focus();
-                return false;
-            }
-        }
-        /* 한번에 유효성검사를 하고 싶을 때
-        function check_input() {
-            document.querySelector("#gform").action="https://script.google.com/macros/s/AKfycbwkZTPePZD7-nsv6sronOWeK96VGDxcLO_oPRFoILTKtpE-7FPIB9YYS31xt75lAxCv/exec"
-            const formValue = document.querySelectorAll(".form_value");
-            formValue.forEach(() => {
-                if(formValue.values != "") {
-                    alert("이름을 입력해주세요");
-                    return false;
-                }
-            }); */
-        }
+        }); */
+  }
 </script>
+
 </html>
