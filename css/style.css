@@ -1,388 +1,484 @@
-html, body {
-    font-size: 100%;
+html,
+body {
+  font-size: 100%;
 }
-*, p, a {
-    font-family: 'Pretendard-Regular';
-}
-@font-face {
-    font-family: 'Pretendard-Light';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+
+*,
+p,
+a {
+  font-family: 'Pretendard-Regular';
 }
 
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Pretendard-Light';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Pretendard-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 
 /*******************************************************/
 body {
-    width: 100%;
-    min-height: 100vh; /*최소한으로 잡아야 할 때 */
-    display: flex;
-    position: relative;
-    overflow-y: scroll; /* Add the ability to scroll */
+  width: 100%;
+  min-height: 100vh;
+  /*최소한으로 잡아야 할 때 */
+  display: flex;
+  position: relative;
+  overflow-y: scroll;
+  /* Add the ability to scroll */
 }
+
 body::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
+
 header {
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40%; 
-    padding-left: 50px; 
-    box-sizing: border-box;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  padding-left: 50px;
+  box-sizing: border-box;
 }
+
 #header {
-    width: 85%;
-    box-sizing: border-box;
+  width: 85%;
+  box-sizing: border-box;
 }
+
 .mySelf {
-    display: flex;
-    margin-bottom: 20px;
-    align-items: flex-end;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-end;
 }
+
 .mySelf img {
-    display: block;
-    width: 200px;
+  display: block;
+  width: 200px;
 }
+
 .introRandom {
-    align-items: center;
+  align-items: center;
 }
+
 .introRandom>p {
-    font-family: 'Pretendard-Bold';
-    font-size: 50px;
-    line-height: 60px;
+  font-family: 'Pretendard-Bold';
+  font-size: 50px;
+  line-height: 60px;
 }
+
 /**************textRandom************/
 .textRandom {
-    overflow: hidden;
-    padding: 0 10px;
-    margin-left: -10px;
+  overflow: hidden;
+  padding: 0 10px;
+  margin-left: -10px;
 }
+
 .quotes>p {
-    font-family: 'Pretendard-Bold';
-    font-size: 40px;
-    line-height: 45px;
+  font-family: 'Pretendard-Bold';
+  font-size: 40px;
+  line-height: 45px;
 }
+
 .quotes>span {
-    font-family: 'Pretendard-Regular';
-    font-size: 20px;
-    color: #777;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+  color: #777;
 }
+
 .mySelf_txt {
-    width: 100%;
-    padding-top: 50px;
+  width: 100%;
+  padding-top: 50px;
 }
+
 .mySelf_txt>p {
-    font-size: 20px;
-    padding-bottom: 20px;
+  font-size: 20px;
+  padding-bottom: 20px;
 }
+
+/**************nav************/
 #nav {
-    position: fixed;
-    left: 40%;
-    transform: translate(-100%, 5%);
-    width: 80px;
+  position: fixed;
+  left: 40%;
+  transform: translate(-100%, 5%);
+  width: 80px;
 }
-#nav>ul{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+
+#nav>ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
 #nav li {
-    padding-bottom: 20px;
-    position: relative;
+  padding-bottom: 20px;
+  position: relative;
 }
+
 #nav a {
-    height: 70px;
-    display: block;
-    cursor: pointer;
+  height: 70px;
+  display: block;
+  cursor: pointer;
 }
+
 #nav img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
 }
+
+/* #skillBtn.navActive {
+  background-image: url(../img/skill.png) !important;
+}
+#projectBtn.navActive {
+  background-image: url(../img/project.png);
+}
+#aboutBtn.navActive {
+  background-image: url(../img/monster.png);
+}
+#contactBtn.navActive {
+  background-image: url(../img/add_color.svg);
+} */
 .caption {
-    width: auto;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translateX(-50%);
-    padding: 0 10px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #6766CC;
-    color: #ffffff;
-    border: 1px solid #fff;
-    opacity: 0;
-    transition: ease-in-out 0.3s;
-    font-size: 14px;
-    line-height: 20px;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 10px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #6766CC;
+  color: #ffffff;
+  border: 1px solid #fff;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  font-size: 14px;
+  line-height: 20px;
 }
-#nav a:hover .caption{
-    opacity: 1;
+
+#nav a:hover .caption {
+  opacity: 1;
 }
+
 .dark_mode {
-    background: #2B2E33;
-    color: #ffffffd9;
+  background: #2B2E33;
+  color: #ffffffd9;
 }
-.dark_mode_nav{
-    filter: invert(100%) sepia(7%) saturate(0%) hue-rotate(148deg) brightness(109%) contrast(106%);
+
+.dark_mode_nav {
+  filter: invert(100%) sepia(7%) saturate(0%) hue-rotate(148deg) brightness(109%) contrast(106%);
 }
+
 main {
-    position: relative;
-    left: 40%;
-    width: 60%;
-    padding: 20px;
-    box-sizing: border-box;
+  position: relative;
+  left: 40%;
+  width: 60%;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
 .bg {
-    height: 100%;
-    background-color: #ebebeb;
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
-    border-radius: 0 30px 30px 0; 
+  height: 100%;
+  background-color: #ebebeb;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 0 30px 30px 0;
 }
+
 .category {
-    width: 100%;
-    padding-top: 30px;
-    font-family: 'Pretendard-Bold';
-    box-sizing: border-box;
+  width: 100%;
+  padding-top: 30px;
+  font-family: 'Pretendard-Bold';
+  box-sizing: border-box;
 }
+
 .category>h2 {
-    width: 280px;
-    font-size: 1.875rem;
-    padding-top: 10px;
-    padding-left: 20px;
-    background-color: #788DD1;
-    border-radius: 0 100px 0 0;
-    box-sizing: border-box;
+  width: 280px;
+  font-size: 1.875rem;
+  padding-top: 10px;
+  padding-left: 20px;
+  background-color: #788DD1;
+  border-radius: 0 100px 0 0;
+  box-sizing: border-box;
 }
+
 .category>div {
-    background-color: #788DD1;
-    width: 100%; height: 10px;
-    margin-bottom: 30px;
+  background-color: #788DD1;
+  width: 100%;
+  height: 10px;
+  margin-bottom: 30px;
 }
+
 h3 {
-    font-family: 'Pretendard-Bold';
-    font-size: 22px;
+  font-family: 'Pretendard-Bold';
+  font-size: 22px;
 }
+
 /*******************미디어쿼리********************/
 
 @media only screen and (max-width: 1600px) {
-    .mySelf {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 10px;
-    }
-    .introRandom {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 10px;
-    }
-    .introRandom>p {
-        margin-right: 10px;
-        font-size: 40px;
-        line-height: 50px;
-    }
-    .introRandom>p:last-child  {
-        width: 100%;
-    }
-    .textRandom {
-        padding-left: 10px;
-    }
-    .quotes>p {
-        font-size: 25px;
-        line-height: 30px;
-    }
-    .mySelf_txt {
-        width: 90%;
-        padding-top: 20px;
-    }
-    .mySelf_txt>p {
-        font-size: 18px;
-        padding-bottom: 20px;
-    }
-} 
-@media only screen and (max-width: 1400px) {
-    header { 
-        padding-left: 30px;
-    }
-    .mySelf img {
-        width: 180px;
-    }
-    .mySelf_txt {
-        padding-top: 20px;
-    }
-    #nav {
-        width: 50px;
-    }
+  .mySelf {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .introRandom {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .introRandom>p {
+    margin-right: 10px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .introRandom>p:last-child {
+    width: 100%;
+  }
+
+  .textRandom {
+    padding-left: 10px;
+  }
+
+  .quotes>p {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .mySelf_txt {
+    width: 90%;
+    padding-top: 20px;
+  }
+
+  .mySelf_txt>p {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
 }
+
+@media only screen and (max-width: 1400px) {
+  header {
+    padding-left: 30px;
+  }
+
+  .mySelf img {
+    width: 180px;
+  }
+
+  .mySelf_txt {
+    padding-top: 20px;
+  }
+
+  #nav {
+    width: 50px;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
-    header { 
-        padding-left: 20px;
-    }
-    .mySelf img {
-        width: 160px;
-    }
-    .category>h2 {
-        font-size: 25px;
-    }
-    .introRandom>p {
-        font-size: 32px;
-        line-height : 35px;
-    }
-    .textRandom {
+  header {
+    padding-left: 20px;
+  }
+
+  .mySelf img {
+    width: 160px;
+  }
+
+  .category>h2 {
+    font-size: 25px;
+  }
+
+  .introRandom>p {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  .textRandom {
     padding: 5px;
     margin-left: -5px;
-    } 
-    .mySelf {
-        margin-bottom: 10px;
-    }
-    .mySelf_txt {
-        width: 90%;
-        padding-top: 10px;
-    }
-    .mySelf_txt>p {
-        font-size: 16px;
-        padding-bottom: 10px;
-    }
-    .quotes>p {
-        font-size: 20px;
-        line-height: 25px;
-    }
-    .quotes>span {
-        font-size: 18px;
-    }
+  }
+
+  .mySelf {
+    margin-bottom: 10px;
+  }
+
+  .mySelf_txt {
+    width: 90%;
+    padding-top: 10px;
+  }
+
+  .mySelf_txt>p {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
+  .quotes>p {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .quotes>span {
+    font-size: 18px;
+  }
 }
+
 @media only screen and (max-width: 992px) {
-    p, a, li {
-        font-size: 14px;
-    }
-    body {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    main {
-        left: 0;
-        height: 100%;
-        width: 100%;
-        padding: 0rem 2rem 2rem;
-        box-sizing: border-box;
-    }
-    header {
-        height: 100%;
-        position: relative;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        width: 100%; 
-        padding: 1.5rem 2rem 0rem;
-        box-sizing: border-box;
-    }
-    #header {
-        width: 100%;
-    }
-    .mySelf img {
-        display: block;
-        width: 120px;
-    }
-    .mySelf {
-        flex-direction: row;
-        align-items: flex-end;
-    }
-    .quotes>p, span {
-        display: inline-block;
-    }
-    .mySelf_txt {
-        display: none;
-    }
-    .introRandom>p {
-        font-size: 32px;
-        line-height: 40px;
-    }
-    #nav {
-        padding: 1.5rem 10px 1rem;
-        box-sizing: border-box;
-        position: relative;
-        left: auto;
-        transform: translate(0);
-        width: 100%;
-    }
-    #nav>ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-    }
-    #nav li {
-        padding-bottom: 0px;
-    }
-    #nav a {
-        height: 50px;
-    }
-    .caption {
-        width: 150%;
-        font-size: 12px;
-        display: block;
-        top: -50%;
-    }
-    .category {
-        padding-top: 20px;
-    }
-    .category>h2 {
-        width: 200px;
-        font-size: 20px;
-    }
-    h3 {
-        font-size: 18px;
-    }
+
+  p,
+  a,
+  li {
+    font-size: 14px;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0rem 2rem 2rem;
+    box-sizing: border-box;
+  }
+
+  header {
+    height: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem 2rem 0rem;
+    box-sizing: border-box;
+  }
+
+  #header {
+    width: 100%;
+  }
+
+  .mySelf img {
+    display: block;
+    width: 120px;
+  }
+
+  .mySelf {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .quotes>p,
+  span {
+    display: inline-block;
+  }
+
+  .mySelf_txt {
+    display: none;
+  }
+
+  .introRandom>p {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  #nav {
+    padding: 1.5rem 10px 1rem;
+    box-sizing: border-box;
+    position: relative;
+    left: auto;
+    transform: translate(0);
+    width: 100%;
+  }
+
+  #nav>ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  #nav li {
+    padding-bottom: 0px;
+  }
+
+  #nav a {
+    height: 50px;
+  }
+
+  .caption {
+    width: 150%;
+    font-size: 12px;
+    display: block;
+    top: -50%;
+  }
+
+  .category {
+    padding-top: 20px;
+  }
+
+  .category>h2 {
+    width: 200px;
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
 }
+
 @media only screen and (max-width: 768px) {
-    body {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    #nav>li>a>span {
-        display: none;
-    }
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nav>li>a>span {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 576px) {
-    .introRandom>p {
-        font-size: 28px;
-        line-height: 35px;
-    }
-    h3{
-        font-size: 16px;
-    }
+  .introRandom>p {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 375px) {
-    .category>h2 {
-        font-size: 18px;
-    }
+  .category>h2 {
+    font-size: 18px;
+  }
 
-    .introRandom>p {
-        font-size: 22px;
-        line-height: 30px;
-    }
+  .introRandom>p {
+    font-size: 22px;
+    line-height: 30px;
+  }
 }

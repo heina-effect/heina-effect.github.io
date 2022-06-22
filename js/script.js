@@ -10,7 +10,9 @@ const enableDarkMode = () => {
   lightBtn.src = "img/moon.png";
   document.querySelector(".bg").style.backgroundColor = "#242629";
   for (var i = 0; i < darkModeNav.length; i++) {
-    darkModeNav[i].classList.add("dark_mode_nav");
+    if(!darkModeNav[i].classList.contains('navActive')){
+      darkModeNav[i].classList.add("dark_mode_nav");
+    }
   }
 }
 const disableDarkMode = () => {
@@ -36,6 +38,25 @@ darkModeBtn.addEventListener("click", () => {
   }
 })
 
+//문제점1. 이벤트 버블링
+//문제점2. teget제외한것들 어떻게 적용하나
+let navLists = document.querySelectorAll(".navList>a>img")
+for (let navList of navLists) {
+  navList.addEventListener("click", (event)=>{
+    // event.preventDefault();
+    // e.stopImmediatePropatation();
+    console.log("target", event)
+    if( 
+      event.target.classList.contains('contactBtn')
+    ){
+      event.target.classList.add('navActive')
+    }
+    // if(event.target !== event.currentTarget){
+    //   navLists.classList.remove('navtest')
+    // }
+    console.log(event.target.className);
+  })
+}
 // ========================= intro text random js
 var textRandom = document.querySelector(".textRandom");
 const textList = ["CREATIVE", "INTELLECTUAL", "PROGRESSIVE", "HUMOROUS", "ENTHUSIATIC"];

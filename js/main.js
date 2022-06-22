@@ -65,26 +65,25 @@ class Header extends HTMLElement {
           </li>
           <li class="navList">
             <a href="./index.html">
-              <!-- <img class="navBtn" src="img/skill.svg" alt="skillSvg"> -->
-              <img class="navBtn" src="img/skill.png" alt="skillSvg">
+              <img id="skillBtn" class="navBtn navDark navActive" src="img/skill.svg" alt="skillSvg">
               <p class="caption">SKILL</p>
             </a>
           </li>
           <li class="navList">
             <a href="./project.html">
-              <img class="navBtn navDark" src="img/project.svg" alt="proSvg">
+              <img id="projectBtn" class="navBtn navDark navActive" src="img/project.svg" alt="proSvg">
               <p class="caption">PROJECT</p>
             </a>
           </li>
           <li class="navList">
             <a href="./about.html">
-              <img class="navBtn navDark" src="img/monster.svg" alt="monsterSvg">
+              <img id="aboutBtn" class="navBtn navDark navActive" src="img/monster.svg" alt="monsterSvg">
               <p class="caption">ABOUT</p>
             </a>
           </li>
           <li class="navList">
             <a href="./contact.html">
-              <img class="navBtn navDark" src="img/add.svg" alt="addSvg">
+              <img id="contactBtn" class="navBtn navDark navActive" src="img/add.svg" alt="addSvg">
               <p class="caption">CONTACT</p>
             </a>
           </li>
@@ -92,28 +91,6 @@ class Header extends HTMLElement {
       </article>
     </header>
     `
-    // let navLists = document.querySelectorAll(".navList>a>img")
-    // for (let navList of navLists) {
-    //   navList.addEventListener("click", (e)=>{
-    //     e.preventDefault();
-    //     console.log("target",e)
-    //     // navList.src = "img/skill.png";
-    //     let filePath = navList.src
-    //     // let filelength = srcd.length;
-    //     console.log("파일주소", filePath)
-        
-    //     let change = filePath.split(".").pop()
-
-
-    //     // let fileDot = filePath.substr(-3)
-    //     // console.log("확장자명", fileDot)
-    //     // fileDot = "png"
-    //     // console.log("확장자명", fileDot)
-    //     // src="img/skill.png"
-
-    //     // http://127.0.0.1:5500/Heina/heina-effect.github.io/img/project.svg
-    //   })
-    // }
   }
 }
 customElements.define('header-components', Header);

@@ -1,83 +1,102 @@
 main .skills {
-    width: 100%;
-    padding: 0px 50px;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  padding: 0px 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
 }
+
 .skills>figure {
-    width: 20%;
-    text-align: center;
+  width: 20%;
+  text-align: center;
 }
+
 .skills img {
-    border: 1px solid #777;
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px 10px;
-    box-sizing: border-box;
-    margin:auto;
-    display: block;
-    width: 100px; height: 100px;
+  border: 1px solid #777;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  margin: auto;
+  display: block;
+  width: 100px;
+  height: 100px;
 }
+
 figcaption {
-    font-family: 'Pretendard-Bold';
-    font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 25px;
+  font-family: 'Pretendard-Bold';
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 25px;
 }
+
 .skills>div {
-    margin-bottom: 30px;
-    width: 100%;
-    border: 1px solid #777
+  margin-bottom: 30px;
+  width: 100%;
+  border: 1px solid #777
 }
+
 .sText {
-    position: relative;
-    top: -10px;
-    opacity: 0.8;
+  position: relative;
+  top: -10px;
+  opacity: 0.8;
 }
+
 @media only screen and (max-width: 1280px) {
-    main .skills {
-        padding: 0px 30px;
-        box-sizing: border-box;
-    }
-    .skills>figure {
-        width: 25%;
-    }
-    figcaption {
-        font-size: 14px;
-        padding-bottom: 15px;
-    }
-    .skills>div {
-        margin-top: 10px;
-    }
+  main .skills {
+    padding: 0px 30px;
+    box-sizing: border-box;
+  }
+
+  .skills>figure {
+    width: 25%;
+  }
+
+  figcaption {
+    font-size: 14px;
+    padding-bottom: 15px;
+  }
+
+  .skills>div {
+    margin-top: 10px;
+  }
 }
+
 @media only screen and (max-width: 992px) {
-    main {
-        height: 100%;
-    }
-    .skills>figure {
-        width: 20%;
-    }
+  main {
+    height: 100%;
+  }
+
+  .skills>figure {
+    width: 20%;
+  }
 }
+
 @media only screen and (max-width: 768px) {
-    .skills img {
-        width: 80px; height: 80px;
-    }
-    figcaption {
-        font-size: 12px;
-        padding-bottom: 10px;
-    }
+  .skills img {
+    width: 80px;
+    height: 80px;
+  }
+
+  figcaption {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
 }
+
 @media only screen and (max-width: 576px) {
-    main .skills {
-        padding: 0px 10px;
-    }
-    .skills>figure {
-        width: 33%;
-    }    
+  main .skills {
+    padding: 0px 10px;
+  }
+
+  .skills>figure {
+    width: 33%;
+  }
 }
+
 @media only screen and (max-width: 375px) {
-    .skills img {
-        width: 60px; height: 60px;
-    }
+  .skills img {
+    width: 60px;
+    height: 60px;
+  }
 }
